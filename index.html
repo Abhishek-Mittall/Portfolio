@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+
+  <!--  <link href = "https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel = "stylesheet" > -->
+  <link rel = "stylesheet" href = "./css/styles.css"/>
+  <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function() {
+  AOS.init();
+});
+
+$(window).on('load', function() {
+  AOS.refresh();
+});
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html,body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+</script>
+<script type="text/javascript">
+    var i = 0;
+    function makeProgress(){
+        if(i < 100){
+            i = i + 1;
+            $(".progress-bar").css("width", i + "%");
+        }
+        // Wait for sometime before running this script again
+        setTimeout("makeProgress()", 35);
+    }
+    makeProgress();
+</script>
+<script>
+$(function() {
+
+  var $meters = $(".progress > span");
+  var $section = $('#bar');
+  var $queue = $({});
+
+  function loadDaBars() {
+    $meters.each(function() {
+      var $el = $(this);
+      var origWidth = $el.width();
+      $el.width(0);
+      $queue.queue(function(next) {
+        $el.animate({
+          width: origWidth
+        }, 1200, next);
+      });
+    });
+  }
+
+  $(document).bind('scroll', function(ev) {
+    var scrollOffset = $(document).scrollTop();
+    var containerOffset = $section.offset().top - window.innerHeight;
+    if (scrollOffset > containerOffset) {
+      loadDaBars();
+      // unbind event not to load scrolsl again
+      $(document).unbind('scroll');
+    }
+  });
+
+});
+
+</script>
+  <body class = "main">
+    <section class = "title">
+         <nav class="navbar navbar-expand-lg navbar-dark ">
+           <div class = "container-fluid">
+             <div class = "head">
+               <p class="navbar-brand-tin">Portfolio</p>
+             </div>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#list" >
+          <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="list">
+           <ul class = "navbar-nav ml-auto">
+             <li class = "nav-item">
+               <a  href = "#home">Home</a>
+            </li><hr/>
+             <li class = "nav-item">
+               <a  href = "#about">About</a>
+            </li><hr/>
+            <li class = "nav-item">
+              <a  href = "#work">Work</a>
+            </li><hr/>
+               <li class = "nav-item">
+               <a  href = "#contact">Contact</a>
+             </li><hr/>
+           </ul>
+
+         </div>
+         </div>
+         </nav>
+           <hr style = "margin:0px;height :3px; width:100%;background-color:green;" >
+
+        </section>
+
+    <section id = "home">
+      <h1 class = "intro" class="w3-container w3-center w3-animate-bottom">Hey I am Abhishek Mittal</h1>
+      <h3 class = "myself"><em>a web developer</em></h3>
+      <a href = "#about" style = "margin-top:20px;" class = "btn btn-primary btn-danger btn-lg">Know Me</a>
+      </section>
+       <hr style = "margin:0px;height :3px; width:100%;background-color:green;" >
+
+    <section id = "about">
+      <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+      <div class="carousel-item active">
+      <h1 class = "about_heading" data-aos="zoom-in" data-aos-duration="1000"><u>About</u></h1>
+    <div class="row">
+      <div class = "image_about_div col-lg-6 col-md-6" data-aos="fade-right" data-aos-duration="1000">
+        <img class = "image_about" src = ".\css\images\abhishek_portfolio.jpeg" alt = "Image of Developer" />
+      </div>
+      <div class = " content_about col-lg-6 col-md-6" data-aos="fade-left" data-aos-duration="1000">
+        <!--<h3 class = "subheading_about">I'm a software developer</h3> -->
+         <p class = "subcontent_about">I am a Front-End Software Developer</p>
+        <!-- <h3 class = "subheading_achieve">Best Volunteer AVENSIS 2019</h3>
+        <p class = "subcontent_achieve">I was honoured as  best volunteer under Publicity and Sponsorship department in my college's Annual Technical Fest AVENSIS 2019.</p> -->
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item">
+  <h1 class = "about_heading"><u>Education</u></h1>
+<div class="row">
+  <div class = "image_about_div col-lg-6 col-md-6" data-aos="fade-right" data-aos-duration="1000">
+    <img class = "image_about" src = ".\css\images\college_portfolio.jpg" alt = "Image of College" />
+  </div>
+  <div class = " content_about col-lg-6 col-md-6" data-aos="fade-left" data-aos-duration="1000">
+    <!--<h3 class = "subheading_about">I'm a software developer</h3> -->
+     <h1 class = "subheading_about">Maharaja Surajmal Institute of Technology</h1>
+     <span class = "subcontent_about">Programme:- B.Tech</span> <br />
+     <span class = "subcontent_about">Course:- Computer Science and Engineering</span><br />
+     <span class = "subcontent_about">Batch:- 2017-2021</span><br />
+     <span class = "subcontent_about">C.G.P.A :- 8.66</span><br />
+    <!-- <h3 class = "subheading_achieve">Best Volunteer AVENSIS 2019</h3>
+    <p class = "subcontent_achieve">I was honoured as  best volunteer under Publicity and Sponsorship department in my college's Annual Technical Fest AVENSIS 2019.</p> -->
+  </div>
+</div>
+</div>
+<a class= "about_button carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+    </section>
+     <hr style = "margin:0px;height :3px; width:100%;background-color:green;" >
+    <section id = "skills">
+      <h1 class = "skills_heading">Skills</h1>
+      <div class = "row skills_content">
+          <div class = "col-lg-3 col-md-3" data-aos="flip-left" data-aos-duration="1000">
+             <span id = "pentagon"></span>
+          </div>
+        <div class = "col-lg-3 col-md-3" data-aos="flip-left" data-aos-duration="1000">
+
+          <span id = "pentagon"></span>
+          </div>
+      <!--  <div class = "col-lg-3">
+
+          <a class = navbar-link1 href = ""><i class="icon fa fa-twitter-square"></i> Twitter</a>
+        </div> -->
+
+          <div class = "col-lg-3 col-md-3" data-aos="flip-left" data-aos-duration="1000">
+
+          <span id = "pentagon"></span>
+          </div>
+          <div class = "col-lg-3 col-md-3" data-aos="flip-left" data-aos-duration="1000">
+          <span id = "pentagon"></span>
+          </div>
+        </div>
+        <div id = "bar" class = "skills_content">
+           <div class="bs-example">
+    <span>HTML5</span>
+    <div class="progress" style = "height:30px;">
+    <span class="progress-bar bg-success progress-bar-striped" style="max-width:80%;height:30px;">80%</span>
+    </div>
+    <br/>
+    <span>CSS3</span>
+    <div class="progress" style = "height:30px;">
+        <span class="progress-bar bg-success progress-bar-striped" style="max-width:80%;height:30px;">80%</span>
+     </div>
+     <br/>
+     <span>JS</span>
+     <div class="progress" style = "height:30px;">
+         <span class="progress-bar bg-warning progress-bar-striped" style="max-width:70%;height:30px;">70%</span>
+      </div>
+      <br/>
+      <span>React Js</span>
+      <div class="progress" style = "height:30px;">
+          <span class="progress-bar bg-success progress-bar-striped" style="max-width:80%;height:30px;">80%</span>
+       </div>
+       <br/>
+       <span>Node Js</span>
+       <div class="progress" style = "height:30px;">
+           <span class="progress-bar bg-warning progress-bar-striped" style="max-width:70%;height:30px;">70%</span>
+        </div>
+        <br/>
+        <span>Mongodb</span>
+        <div class="progress" style = "height:30px;">
+            <span class="progress-bar bg-info progress-bar-striped" style="max-width:60%;height:30px;">60%</span>
+         </div>
+     </div>
+     </div>
+    </section>
+  <!-- <hr style = "margin:0px;height :3px; width:100%;background-color:green;" > -->
+      <section id = "work">
+        <h1 class = "intro1" data-aos="fade-right" data-aos-duration="1000" ><u>These are some of my projects</u></h1>
+        <div class = "row">
+         <div class = "icon col-lg-4 col-md-4" data-aos="flip-right" data-aos-duration="1000">
+           <div class = "image-div">
+             <img class = "image" src = "data:image/png;base64,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"/>
+           </div>
+           <div class = "url">
+             <a class = "link" href = "https://pure-tor-43587.herokuapp.com/" target = "blank"><center>Blog Website</center></a>
+           </div>
+         </div>
+
+           <div class = "icon col-lg-4 col-md-4" data-aos="flip-right" data-aos-duration="1000">
+             <div class = "image-div">
+               <img class = "image" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAB+CAMAAADV/VW6AAAAgVBMVEX///8auIoBoMcAtYUAnsYAnMUAtIIAmsQAl8LT7+UAsn70+/n5/fz3/P0AlMGK1bvk9e/t+PRvzK3F6dzv9/rZ8emb2sSC0rZVxaBdx6Sj3ckxvJF60LOt4M7c8feq1+dct9S73utuvNeRy+BEv5e65dbL5/A/r9Cd0eN/w9sspsq5gTo/AAAFGElEQVRoge2aWbuaMBCGDwTCoijuIIq4gfL/f2CDCno0may0F/W76NOLPn0zk9ky+PPz1VdfffUVQ8N4MTuvl6tG4+V2Fiwmf408G6enzMIYo7uav1lZstkG8bBndrBKEMFaFJFjWMkq6O8E56kVUskvZwjR9NwHe7FqfCwg4oXNzDA8SOgeZ5wAnbYDg/BUBn4TztaGDhBPxbz+cYCtCfpYCX4/QKALDyysCG8UTvXK0VLV8odQppGGk1TH9LvwSpUeZ5q23/mJ2gUE+qbfhCyVCJyZMP0h+QCYmYMTB8hW4YVB24mwnP8HZunE/oUEfZgZphNJxP/KUNC/CKXC9LN5OuEvBemTHlxPFMZi+KnpuLsLJUJ0U9XuQ6FQ9Un6MZ4oERiDg7AvuoUFil9PN99IIPni/own4ta+cX/GE++vOfTBqUc6P/eCPo0n4sT+sq+kvwtxGm9/SX/Hw5Vn0E+5f+Lh2Av6pfPa3rnnyENjEL/tN/J4eDNFB2EcNiJ/vu0kOM7f6OIRRlmyWZ6DeEIUB7PlJs1QdwZO6Gn2G2wly2DyXlomwTqx7ifgJJ4OHuHTljlPxdukOQBn3lZ3PsYrTjuLV+QS4KKrGnoIjQXm+MGY03IUEw9tBKdYzrpJ6VmLMlN7vIUCPdxQLzTKieaSfPlp4+PxHJW7a2WPRiPf90cjtzrsSuFTyIY+yn7fer4vbNd1Hcdu5TiuYxf7XAgv+bxD6WvAR+XB8V7IL0fwyAkiPj6WouP0NZR3lUdBtydw/frCP0Aq4X38msb72mOyH/LsCw8v8ch5nVvzyufBby5wShg/FI59lD09f7HZbn87wBVOA/HC102t0QG49He5NZgEQ8HLx92+fF65wvCbA/YQfy1kPtp0dFHHdxrtIL7QsN1dvDzdtv0jgBfpO8+nei3l+Yc8KANXXP4z5w4qdMIH7p//1sHtZLMTSXeKHB/Iv5gTfWj6+Ie5mu0Nvwbcz9ludRNjIR92rTwo/M7Ql7tuR7PnlnlIUPkJEuDm27Cv1I0n5e8A4H8GbPzpkfOllvG2A5nP3nPg9p141TGemH8FjGd3vrANPFcP7zhsPDB1ZY/JNlfM+af57ObPNr5rNhflpG/xzNwD6n7XaQ96vifeL1h4YMPVfhaItNLuhrcZdGizix7/RqXTvsljjL7QS/fU4bXF6DvQwNW1m7m28Sw8NG912yETeKrzwWEbtYFv4O7p+BnUbrvtUFRpW08ve+BD6/mg1s97auLBX6+feM2OQ/AVDQ9s15ofqHX4vW7Nd2gtb8KgI2wlKVH3thpqtxzac4P6Yxkye6UfS0PdquvR5g2a3Wgzo+ztdpotjzbsnsM3dHhaMr7ADPUy36P5PvnFtqZbYF151Bn2nJpScp8TPsLZlObyF+U65lONv2cdSbDTOOCvaTXMdwvK/9dstlAYJuzV+C9Ftbr1tG43DXG2kljRlqq579OSLk6XC7mfuiq6n77hGsr/zFat9oDrHRnNa3m+y10v9spnT9gq/Er6/oH3jbyiQpYPP66ldaSt0QE51KxXVyl5AeznnaJ2ti/hAcczjL99TmAOAB+X4xvL/E5Rea1dz3lDObbjunb9djT6mKmreXkpasLz3Js8lxymLo5lPi+Ptf26DvFN5t4vRfl+dzkSXXb7Mn++ZPJd4fqtE4yWHmGVx2p0//hgtPRIaH4pbBIhhkuPjPJ9UXvgXq9vzfcFsNf7Kyf4t/ivvvrqv9YfczZhx4q71mAAAAAASUVORK5CYII=" />
+             </div>
+             <div class = "url">
+               <a class = "link" href = "https://abhishek-mittall.github.io/tindog/" target = "blank"><center>Chat Application</center></a>
+             </div>
+           </div>
+
+             <div class = "icon col-lg-4 col-md-4" data-aos="flip-right" data-aos-duration="1000">
+               <div class = "image-div">
+                 <img class = "image" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXDz_B_WzfBi1F3h_2wnxObO5w9VJ9QPteULlBx036TwNIxTq9&usqp=CAU" />
+               </div>
+               <div class = "url">
+                 <a class = "link" href = "https://abhishek-mittall.github.io/tindog/" target = "blank"><center>Tindog</center></a>
+               </div>
+             </div>
+               <div class = "icon col-lg-4 col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                 <div class = "image-div">
+                   <img class = "image" src = "https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/map.jpg" />
+                 </div>
+                 <div class = "url">
+                   <a class = "link" href = "" target = "blank"><center>Map Data Across the Globe</center></a>
+                 </div>
+               </div>
+
+                 <div class = "icon col-lg-4 col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                   <div class = "image-div">
+                     <img class = "image" src = "https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/wiki.png" />
+                   </div>
+                   <div class = "url">
+                     <a class = "link" href = "" target = "blank"><center>Wikipedia Viewer</center></a>
+                   </div>
+                 </div>
+
+                   <div class = "icon col-lg-4 col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                     <div class = "image-div">
+                       <img class = "image" src = "https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/tic-tac-toe.png" />
+                     </div>
+                     <div class = "url">
+                       <a class = "link" href = "" target = "blank"><center>Tic Tac Toe Game</center></a>
+                     </div>
+                   </div>
+       </div>
+        </section>
+        <section id = "achieve">
+            <h1 class = "achieve_heading" data-aos="zoom-in" data-aos-duration="1000">Acheivements</h1>
+          <div class="row">
+            <div class = "image_achieve col-lg-6 col-md-6" data-aos="fade-right" data-aos-duration="1000">
+              <img src = ".\css\images\avensis_2020_new.jpg" alt = "Logo of Avensis" />
+            </div>
+            <div class = " content_achieve col-lg-6 col-md-6" >
+              <div data-aos="fade-left" data-aos-duration="1000">
+                <h3 class = "subheading_achieve">Chief Organisor AVENSIS 2020</h3>
+                <p class = "subcontent_achieve">I played role of chief organisor in my college's Annual Technical Fest AVENSIS 2020.</p>
+              </div>
+              <div data-aos="fade-left" data-aos-duration="1500">
+                <h3 class = "subheading_achieve">Best Volunteer AVENSIS 2019</h3>
+                <p class = "subcontent_achieve">I was honoured as  best volunteer under Publicity and Sponsorship department in my college's Annual Technical Fest AVENSIS 2019.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+   <hr style = "margin:0px;height :3px; width:100%;background-color:green;" >
+        <section id = "contact">
+          <div >
+            <h1 class = "intro2" data-aos="fade-down" data-aos-duration="1000">Let's work together...</h1>
+            <p class ="myself2" data-aos="fade-down" data-aos-duration="1000">How do you take your coffee?</p>
+            <div style = "text-align : center; border-radius : 30%; ">
+              <form action=" " method=" " style = "display: inline-block;margin-left: auto;margin-right: auto;text-align: left; margin-bottom : 50px;">
+                <div class="form-group">
+                  <div data-aos="fade-right" data-aos-duration="1000">
+                    <label class = "contact">Name</label>
+                    <input class="form-control" type="text" name="postTitle">
+                  </div>
+                  <div data-aos="fade-left" data-aos-duration="1000">
+                    <label class = "contact">Email</label>
+                    <input class="form-control" type="text" name="postTitle">
+                  </div>
+                  <div data-aos="fade-right" data-aos-duration="1000">
+                    <label class = "contact">Comments</label>
+                    <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+                  </div>
+                </div>
+                <button class="btn btn-primary" data-aos="fade-right" data-aos-duration="1000" type="submit" name="button">Submit</button>
+              </form>
+              </div>
+            <div class = "row">
+                <div class = "col-lg-3 col-md-3" data-aos="fade-down" data-aos-duration="1000">
+
+                <a class = navbar-link1 href = "https://www.facebook.com/abhishek.mittal.12979" target = "blank"><i class="icon fa fa-facebook-square"></i> Facebook</a>
+                </div>
+              <div class = "col-lg-3 col-md-3" data-aos="fade-down" data-aos-duration="1000">
+
+                <a class = navbar-link1 href = "https://github.com/Abhishek-Mittall" target = "blank"><i class="icon fa fa-github-square"></i> Github</a>
+                </div>
+            <!--  <div class = "col-lg-3">
+
+                <a class = navbar-link1 href = ""><i class="icon fa fa-twitter-square"></i> Twitter</a>
+              </div> -->
+
+                <div class = "col-lg-3 col-md-3" data-aos="fade-down" data-aos-duration="1000">
+
+                <a class = navbar-link1 href = "https://www.instagram.com/abhishekmittall/?hl=en" target = "blank"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+                </div>
+                <div class = "col-lg-3 col-md-3" data-aos="fade-down" data-aos-duration="1000">
+                <a class = navbar-link1 href = "https://www.linkedin.com/in/abhishek-mittall" target = "blank"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a>
+                </div>
+
+
+              </div>
+
+            </div>
+          </section>
+          <hr style = "margin:0px;height :3px; width:100%;background-color:green;" >
+          <section class = "footer">
+            <h4 class = "intro3">Made with <i class="fa fa-heart" aria-hidden="true"></i> by Abhishek Mittal</h4>
+            <p>© Copyright 2019</p>
+          </section>
+
+  </body>
+</html>
