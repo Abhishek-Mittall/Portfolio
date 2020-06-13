@@ -370,7 +370,7 @@ font-family:Gill Sans;
     font-size : 86px;
      color : white;
      text-decoration : none;
-     font-family:cursive;
+     font-family:Times New Roman;
   }
   .nav-item
   {
@@ -393,13 +393,13 @@ font-family:Gill Sans;
 
   .myself{
     color:lightgreen;
-    font-family:cursive;
+    font-family:Times New Roman;
     font-size : 60px;
   }
   .intro{
     font-size:75px;
     color:whitesmoke;
-    font-family:cursive;
+    font-family:Times New Roman;
     animation-delay: 7s;
 
   }
@@ -455,6 +455,7 @@ font-family:Gill Sans;
     font-weight:bold;
     font-family:serif;
     margin-left:20px;
+    text-align:left;
   }
   .subcontent_about
   {
@@ -462,12 +463,12 @@ font-family:Gill Sans;
     font-size: 40px;
     font-family:Times New Roman;
     margin-left:20px;
+    text-align:left;
   }
   .carousel-control-next,
   .carousel-control-prev {
       filter: invert(100%);
       margin-top:225px;
-
   }
 
   #skills{
@@ -482,7 +483,7 @@ font-family:Gill Sans;
     margin-bottom:40px;
     text-decoration:underline;
     padding-top:0px;
-    font-family: cursive;
+    font-family: Times New Roman;
   }
       .diamond {
         height: 115px;
@@ -554,7 +555,7 @@ font-family:Gill Sans;
     font-size:50px;
     color:black;
     text-align:center;
-    font-family:cursive;
+    font-family:Times New Roman;
   }
 
   .image{
@@ -609,7 +610,7 @@ font-family:Gill Sans;
     font-weight:bold;
     margin-bottom:30px;
     padding-top:0px;
-    font-family:cursive;
+    font-family:Times New Roman;
   }
   .image_achieve_div
   {
