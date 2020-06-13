@@ -370,6 +370,7 @@ font-family:Gill Sans;
     font-size : 86px;
      color : white;
      text-decoration : none;
+     font-family:cursive;
   }
   .nav-item
   {
@@ -378,7 +379,7 @@ font-family:Gill Sans;
     color:WhiteSmoke;
     font-weight:bold;
     font-size:40px;
-    font-family:Gill Sans;
+    font-family:cursive;
     transition: left ease 1s;
   }
   #home{
@@ -392,13 +393,13 @@ font-family:Gill Sans;
 
   .myself{
     color:lightgreen;
-    font-family:Gill Sans;
+    font-family:cursive;
     font-size : 60px;
   }
   .intro{
     font-size:75px;
     color:whitesmoke;
-    font-family:Gill Sans;
+    font-family:cursive;
     animation-delay: 7s;
 
   }
@@ -425,38 +426,42 @@ font-family:Gill Sans;
   }
   .image_about_1{
     border-radius:0%;
-    width:65%;
+    width:45%;
     margin-left:100px;
     box-shadow: 0px 0px 12px #8c8c8c;
 
   }
   .image_about_2{
     border-radius:0%;
-    width:86%;
+    width:45%;
     margin-left:50px;
     box-shadow: 0px 0px 12px #8c8c8c;
 
   }
   .content_about
   {
-    padding:50px ;
+    padding-top:30px;
+    padding-left:40px;
+    margin-left:150px;
+    margin-right:50px;
+    margin-top:30px;
 
   }
   .subheading_about
   {
-    font-size:30px;
+    font-size:50px;
     padding-bottom:5px;
     padding-right:10px;
     font-weight:bold;
     font-family:serif;
-    margin-right:60px;
+    margin-left:20px;
   }
   .subcontent_about
   {
     padding-bottom:30px;
-    font-size: 22px;
+    font-size: 40px;
     font-family:Times New Roman;
-    margin-right:0px;
+    margin-left:20px;
   }
   .carousel-control-next,
   .carousel-control-prev {
@@ -467,7 +472,6 @@ font-family:Gill Sans;
 
   #skills{
     padding:80px;
-    font-family:Gill Sans;
     background-color:white;
   }
   .skills_heading
@@ -478,6 +482,7 @@ font-family:Gill Sans;
     margin-bottom:40px;
     text-decoration:underline;
     padding-top:0px;
+    font-family: cursive;
   }
       .diamond {
         height: 115px;
@@ -485,17 +490,18 @@ font-family:Gill Sans;
         transform: rotateX(45deg) rotateZ(45deg);
         box-shadow: 0px 0px 12px black;
         background-color: #00cccc;
-        padding:0px;
-        margin:15px;
+        padding-left:0px;
+        margin-left:80px;
+        margin-top:40px;
         color:white;
   }
   .skills_icon
   {
      transform: rotateX(0deg) rotateZ(-45deg);
-     margin-left:40px;
-     margin-right:100px;
-     margin-top:40px;
-     margin-bottom:90px;
+     padding-left:75px;
+     padding-right:0px;
+     padding-top:0px;
+    padding-bottom:185px;
   }
   .skills_subheading
   {
@@ -504,6 +510,8 @@ font-family:Gill Sans;
     font-weight:bold;
     font-family:sans;
     color:#4d4d4d;
+    text-align:left;
+    margin-left:60px;
   }
   .skills_content
   {
@@ -518,7 +526,7 @@ font-family:Gill Sans;
     font-size:15px;
     font-family:times;
     text-align:center;
-    padding-right:22px;
+
   }
   .skills_subcontent_2
   {
@@ -539,7 +547,6 @@ font-family:Gill Sans;
   #work{
     background-color:#e6e6e6;
     padding:150px;
-    font-family:Gill Sans;
     box-shadow: 0px 0px 12px #808080;
   }
   .intro1{
@@ -547,7 +554,7 @@ font-family:Gill Sans;
     font-size:50px;
     color:black;
     text-align:center;
-    font-family:Gill Sans;
+    font-family:cursive;
   }
 
   .image{
@@ -602,6 +609,7 @@ font-family:Gill Sans;
     font-weight:bold;
     margin-bottom:30px;
     padding-top:0px;
+    font-family:cursive;
   }
   .image_achieve_div
   {
@@ -613,6 +621,7 @@ font-family:Gill Sans;
     box-shadow: 0px 0px 12px #8c8c8c;
     margin-right:40px;
     text-align:left;
+    margin-bottom: 30px;
   }
   .content_achieve
   {
@@ -624,12 +633,14 @@ font-family:Gill Sans;
     padding-bottom:5px;
     font-weight:bold;
     font-family:serif;
+    margin-left:80px;
   }
   .subcontent_achieve
   {
     padding-bottom:30px;
     font-size: 22px;
     font-family:Times New Roman;
+    margin-left:80px;
   }
   #contact{
     background-color:#000d1a;
@@ -644,7 +655,7 @@ font-family:Gill Sans;
     font-size:80px;
     text-align:center;
     color:WhiteSmoke;
-    font-family:Gill Sans;
+    font-family:cursive;
     animation : intro 4s 1;
   }
   .contact{
@@ -659,7 +670,7 @@ font-family:Gill Sans;
     color:WhiteSmoke;
     font-size:25px;
       padding-bottom:60px;
-      font-family:Gill Sans;
+      font-family:cursive;
   }
   .navbar-link1{
     margin-top:70px;
