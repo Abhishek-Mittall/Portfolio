@@ -354,7 +354,7 @@ font-family:Gill Sans;
   text-align:center;
   font-family:Gill Sans;
 }
-/*@media (max-width:1000px)
+@media (max-width:1000px)
 {
   .navbar{
     background-color:#00001a;
