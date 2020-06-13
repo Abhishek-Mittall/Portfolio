@@ -111,6 +111,7 @@ background-color:#f5f5f0;
   font-size: 25px;
   font-family:Times New Roman;
   margin-right:0px;
+  text-align:justify;
 }
 .carousel-control-next,
 .carousel-control-prev {
@@ -154,10 +155,11 @@ background-color:#f5f5f0;
 .skills_subheading
 {
   padding-top:10px;
-  padding-left:45px;
+  padding-left:48px;
   font-weight:bold;
   font-family:sans;
   color:#4d4d4d;
+  text-align:justify;
 }
 .skills_content
 {
@@ -173,6 +175,10 @@ background-color:#f5f5f0;
   font-family:times;
   text-align:center;
   padding-right:22px;
+  font-weight:bold;
+  font-family:sans;
+  color:#4d4d4d;
+
 }
 .skills_subcontent_2
 {
@@ -192,7 +198,7 @@ background-color:#f5f5f0;
 }
 #work{
   background-color:#e6e6e6;
-  padding:150px;
+  padding:120px;
   font-family:Gill Sans;
   box-shadow: 0px 0px 12px #808080;
 }
@@ -202,21 +208,28 @@ background-color:#f5f5f0;
   color:black;
   text-align:center;
   font-family:Gill Sans;
+  padding-bottom:60px;
 }
-
+.icon
+{
+  color:whitesmoke;
+  font-family:Gill Sans;
+}
 .image{
   width:100%;
   height:100%;
-  padding-top:50px;
+
 }
 
 .image-div{
   width:100%;
   height: 70%;
+  box-shadow: 0px 0px 12px #808080;
 }
 .url{
   padding:15px;
   background-color:#000d1a;
+  box-shadow: 0px 0px 12px #808080;
 }
 .link{
   color:whitesmoke;
@@ -267,6 +280,7 @@ background-color:#f5f5f0;
 .content_achieve
 {
   padding:30px;
+  text-align:justify;
 }
 .subheading_achieve
 {
@@ -334,11 +348,7 @@ font-family:Gill Sans;
   padding:10px;
   font-family:Gill Sans;
 }
-.icon
-{
-  color:whitesmoke;
-  font-family:Gill Sans;
-}
+
 .footer{
   background-color:#000d1a;
   padding:5px;
@@ -348,19 +358,18 @@ font-family:Gill Sans;
 }
 @media (max-width:1000px)
 {
-
   .navbar{
     background-color:#00001a;
     padding-right:0px;
     padding-left:10px;
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom:0px;
     display:block;
     z-index: 1;
     }
 
   .navbar-brand-tin{
-    font-size : 46px;
+    font-size : 86px;
      color : white;
      text-decoration : none;
   }
@@ -370,7 +379,7 @@ font-family:Gill Sans;
     margin:0px;
     color:WhiteSmoke;
     font-weight:bold;
-    font-size:25px;
+    font-size:40px;
     font-family:Gill Sans;
     transition: left ease 1s;
   }
@@ -575,10 +584,11 @@ font-family:Gill Sans;
   .button{
     text-align:center;
     margin-top:20px;
-
   }
   .btn{
     font-weight:bold;
+
+    font-size:20px;
   }
   #achieve{
     padding:130px;
